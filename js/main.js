@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 		if($(this).hasClass('faq-question--active')){
 			$(this).removeClass('faq-question--active');
-			$(this).children('p').slideUp();
+			$(this).children('.faq-question__answer').slideUp();
 		} else{
 			$('.faq-question .faq-question__answer').slideUp();
 			$('.faq-question').removeClass('faq-question--active');
