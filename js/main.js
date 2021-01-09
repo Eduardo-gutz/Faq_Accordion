@@ -1,15 +1,21 @@
-$(document).ready(function(){
-	$('.faq-question').click(function(e){
-		e.preventDefault();
 
-		if($(this).hasClass('faq-question--active')){
-			$(this).removeClass('faq-question--active');
-			$(this).children('.faq-question__answer').slideUp();
-		} else{
-			$('.faq-question .faq-question__answer').slideUp();
-			$('.faq-question').removeClass('faq-question--active');
-			$(this).addClass('faq-question--active');
-			$(this).children('p').slideDown();
-		}
-	});
+
+var quest = document.querySelectorAll('.faq-question');
+
+const active = function(){
+	if (this.classList.contains('faq-question--active')){
+		this.classList.remove('faq-question--active');
+	}else{
+		quest.forEach(q => {
+			if(q.classList.contains('faq-question--active')){
+				q.classList.remove('faq-question--active');
+			};
+		});
+
+		this.classList.add('faq-question--active');
+	};
+};
+
+quest.forEach(q => {
+	q.addEventListener('click', active);
 })
