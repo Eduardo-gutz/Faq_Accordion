@@ -1,8 +1,7 @@
-
-
 var quest = document.querySelectorAll('.faq-question');
 
-const active = function(){
+const active = function(e){
+	e.preventDefault();
 	if (this.classList.contains('faq-question--active')){
 		this.classList.remove('faq-question--active');
 	}else{
@@ -18,4 +17,4 @@ const active = function(){
 
 quest.forEach(q => {
 	q.addEventListener('click', active);
-})
+});
