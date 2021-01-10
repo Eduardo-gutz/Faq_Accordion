@@ -51,6 +51,7 @@
 	max-width: 400px;
 	height: 535px;
 	background-color: #FFF;
+	box-shadow: 0 53px 81px -50px hsl(229, 80%, 10%);
 	border-radius: 22px;
 	color: var(--very_dark_des_blue);
 	z-index: 1;
