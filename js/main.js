@@ -1,20 +1,19 @@
-var quest = document.querySelectorAll('.faq-question');
+const quest = document.querySelectorAll('.faq__question');
 
-const active = function(e){
-	e.preventDefault();
-	if (this.classList.contains('faq-question--active')){
-		this.classList.remove('faq-question--active');
-	}else{
-		quest.forEach(q => {
-			if(q.classList.contains('faq-question--active')){
-				q.classList.remove('faq-question--active');
-			};
-		});
+function active () {
+  if (this.classList.contains('faq__question_active')) {
+    this.classList.remove('faq__question_active');
+  } else {
+    quest.forEach((q) => {
+      if (q.classList.contains('faq__question_active')) {
+        q.classList.remove('faq__question_active');
+      }
+    });
 
-		this.classList.add('faq-question--active');
-	};
+    this.classList.add('faq__question_active');
+  }
 };
 
 quest.forEach(q => {
-	q.addEventListener('click', active);
+  q.addEventListener('click', active);
 });
