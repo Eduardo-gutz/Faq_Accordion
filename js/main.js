@@ -1,6 +1,7 @@
 const quest = document.querySelectorAll('.faq__question');
 
-function active () {
+function active (event) {
+  event.preventDefault;
   if (this.classList.contains('faq__question_active')) {
     this.classList.remove('faq__question_active');
   } else {
